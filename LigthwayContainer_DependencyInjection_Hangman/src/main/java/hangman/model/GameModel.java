@@ -23,7 +23,7 @@ public class GameModel {
     private int correctCount;
     private LocalDateTime dateTime;
     private int gameScore;
-    private GameScore xd;
+    private GameScore xd = new OriginalScore();
     private int[] lettersUsed;
     
     
@@ -32,6 +32,7 @@ public class GameModel {
     private Scanner scan;
     private String randomWord;
     private char[] randomWordCharArray;
+
     
     
    
@@ -42,7 +43,7 @@ public class GameModel {
         randomWordCharArray = randomWord.toCharArray();
         incorrectCount = 0;
         correctCount = 0;
-        gameScore = 100;
+        gameScore = xd.calculateScore(correctCount, incorrectCount);
         
     }
     
@@ -53,7 +54,7 @@ public class GameModel {
         randomWordCharArray = randomWord.toCharArray();
         incorrectCount = 0;
         correctCount = 0;
-        gameScore = 100;
+        gameScore = xd.calculateScore(correctCount, incorrectCount);
     }
 
     //setDateTime
@@ -75,10 +76,11 @@ public class GameModel {
         }
         if(positions.size() == 0){
             incorrectCount++;
-            gameScore -= 10;
+            
         } else {
             correctCount += positions.size();
         }
+        gameScore = xd.calculateScore(guessChar, guessChar);
         return positions;
         
     }
