@@ -23,6 +23,7 @@ public class GameModel {
     private int correctCount;
     private LocalDateTime dateTime;
     private int gameScore;
+    private GameScore xd;
     private int[] lettersUsed;
     
     
