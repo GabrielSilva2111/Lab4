@@ -1,5 +1,5 @@
 package hangman.model;
-import java.math.*;
+
 public class PowerBonusScore implements GameScore {
     int puntaje = 0;
      /**
