@@ -1,4 +1,4 @@
-package hangman.Test;
+package hangman.model;
 
 import org.junit.Assert;
 import org.junit.Test;
