@@ -13,6 +13,12 @@ public class OriginalScore implements GameScore{
         puntaje -= incorrectCount*10;
 
         return puntaje<0 ? 0 : puntaje;
+        
+     }
+
+     public int reset(){
+        puntaje = 100;
+        return puntaje;
      }
     
 }

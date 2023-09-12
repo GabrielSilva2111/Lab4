@@ -14,5 +14,10 @@ public class BonusScore implements GameScore {
         puntaje -= correctCount-5;
         return puntaje < 0 ? 0 : puntaje;
     }
+
+    public int reset(){
+        puntaje = 0;
+        return puntaje;
+     }
     
 }

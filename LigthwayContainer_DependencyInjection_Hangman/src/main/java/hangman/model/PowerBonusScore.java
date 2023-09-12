@@ -17,5 +17,10 @@ public class PowerBonusScore implements GameScore {
         if(puntaje< 0) return 0;
         return puntaje;
     }
+
+    public int reset(){
+        puntaje = 0;
+        return puntaje;
+     }
     
 }
