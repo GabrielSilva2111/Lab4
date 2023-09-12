@@ -15,13 +15,19 @@ public class GameScoreTest {
         GameScore prueba = new OriginalScore();
         //Act
         int res = prueba.calculateScore(0, 13);
+        //Assert
         Assert.assertTrue(res>=0);
 
     }
 
     @Test
     public void OriginalShouldSubstract(){
-        
+        //Arrange
+        GameScore prueba = new OriginalScore();
+        //Act
+        int res = prueba.calculateScore(15, 3);
+        //Assert
+        Assert.assertTrue(res==70);
     }
 
     @Test
