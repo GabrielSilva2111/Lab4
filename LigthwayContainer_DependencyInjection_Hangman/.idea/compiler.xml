@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Hangman" />
+        <module name="LigthwayContainer_DependencyInjection_Hangman" />
       </profile>
     </annotationProcessing>
   </component>

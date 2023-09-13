@@ -8,17 +8,14 @@ public class OriginalScore implements GameScore{
      * @param correctCount var entero
      * @param incorrectCount var entero
      * @return puntaje
+     *
      */
+    @Override
     public int calculateScore(int correctCount, int incorrectCount) {
-        puntaje -= incorrectCount*10;
-
-        return puntaje<0 ? 0 : puntaje;
-        
-     }
-
-     public int reset(){
         puntaje = 100;
-        return puntaje;
+        puntaje -=  incorrectCount * 10;
+        System.out.println(puntaje);
+        return puntaje <= 0 ? 0 : puntaje;
      }
     
 }

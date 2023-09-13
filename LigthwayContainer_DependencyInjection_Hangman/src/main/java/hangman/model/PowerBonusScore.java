@@ -10,17 +10,17 @@ public class PowerBonusScore implements GameScore {
      * @return puntaje
      */
     public int calculateScore(int correctCount, int incorrectCount) {
-        
-        puntaje += Math.pow(5, correctCount);
-        puntaje -= incorrectCount*8;
-        if(puntaje >=500) return 500;
-        if(puntaje< 0) return 0;
-        return puntaje;
+        if (correctCount == 0){
+            return 0;
+        }
+        int puntajeActual = puntaje;
+        puntajeActual += Math.pow(5, correctCount);
+        puntajeActual  -= incorrectCount*8;
+        if(puntajeActual > 500) return 500;
+        if(puntajeActual< 0) return 0;
+        return puntajeActual;
     }
 
-    public int reset(){
-        puntaje = 0;
-        return puntaje;
-     }
+
     
 }

@@ -10,14 +10,10 @@ public class BonusScore implements GameScore {
      * @return puntaje
      */
     public int calculateScore(int correctCount, int incorrectCount) {
-        puntaje += correctCount*10;
-        puntaje -= correctCount-5;
-        return puntaje < 0 ? 0 : puntaje;
+        int puntajeActual;
+        puntajeActual = correctCount * 10  - incorrectCount * 5 ;
+        return puntajeActual < 0 ? 0 : puntajeActual;
     }
 
-    public int reset(){
-        puntaje = 0;
-        return puntaje;
-     }
     
 }
